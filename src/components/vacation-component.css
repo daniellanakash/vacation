@@ -1,0 +1,116 @@
+#root {
+   height: 100%;
+}
+
+.front {
+   height: 100%;
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ebf1f6+0,abd3ee+17,abd3ee+29,89c3eb+59,89c3eb+63,d5ebfb+98 */
+   background: #ebf1f6;
+   /* Old browsers */
+   background: -moz-linear-gradient(-45deg, #ebf1f6 0%, #abd3ee 17%, #abd3ee 29%, #89c3eb 59%, #89c3eb 63%, #d5ebfb 98%);
+   /* FF3.6-15 */
+   background: -webkit-linear-gradient(-45deg, #ebf1f6 0%, #abd3ee 17%, #abd3ee 29%, #89c3eb 59%, #89c3eb 63%, #d5ebfb 98%);
+   /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(135deg, #ebf1f6 0%, #abd3ee 17%, #abd3ee 29%, #89c3eb 59%, #89c3eb 63%, #d5ebfb 98%);
+   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebf1f6', endColorstr='#d5ebfb', GradientType=1);
+   /* IE6-9 fallback on horizontal gradient */
+
+
+
+}
+
+
+.spinner2 {
+
+   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ebf1f6+0,abd3ee+17,abd3ee+29,89c3eb+59,89c3eb+63,d5ebfb+98 */
+   background: #ebf1f6;
+   /* Old browsers */
+   background: -moz-linear-gradient(-45deg, #ebf1f6 0%, #abd3ee 17%, #abd3ee 29%, #89c3eb 59%, #89c3eb 63%, #d5ebfb 98%);
+   /* FF3.6-15 */
+   background: -webkit-linear-gradient(-45deg, #ebf1f6 0%, #abd3ee 17%, #abd3ee 29%, #89c3eb 59%, #89c3eb 63%, #d5ebfb 98%);
+   /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(135deg, #ebf1f6 0%, #abd3ee 17%, #abd3ee 29%, #89c3eb 59%, #89c3eb 63%, #d5ebfb 98%);
+   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ebf1f6', endColorstr='#d5ebfb', GradientType=1);
+   /* IE6-9 fallback on horizontal gradient */
+
+
+   margin: auto;
+   text-align: center;
+}
+
+
+.ant-card {
+
+   border-radius: 6px;
+   box-shadow: 3px 3px 9px #999;
+}
+
+
+.toggle {
+   float: right;
+
+
+}
+
+.header {
+   background-color: black;
+   width: 100%;
+   height: 60px;
+   opacity: 0.8
+}
+
+
+.company {
+
+   font-family: 'Orbitron', sans-serif;
+   color: white;
+   font-size: 30px;
+   float: left;
+   padding-top: 6px;
+   padding-left: 5px;
+
+
+}
+
+.add {
+   margin-left: 15px;
+   margin-top: 15px;
+   font-size: 18px;
+
+}
+
+.Logout {
+   float: right;
+   margin-top: 13px;
+   margin-right: 26px;
+   font-size: 19px;
+   font-family: 'Roboto', sans-serif;
+}
+
+
+.graph {
+
+   margin-left: 25px;
+   margin-top: 15px;
+   font-size: 18px;
+}
+
+.backAdmin {
+
+   font-size: 24px;
+   color: black;
+
+}
+
+.chart {
+
+   margin-top: 40px;
+}
+
+.regNow {
+
+   font-size: 18px;
+   font-weight: bold;
+}
