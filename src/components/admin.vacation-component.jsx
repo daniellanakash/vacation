@@ -61,6 +61,10 @@ export const AdminVacationComponent = props => {
         <b>Price:</b>
         {vacation.price}
       </div>
+      <div>
+        <b>Followes:</b>
+        {vacation.followers}
+      </div>
     </Card>
   );
 };
