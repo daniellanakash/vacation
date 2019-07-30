@@ -5,9 +5,10 @@ import { Redirect } from "react-router-dom";
 import userService from "../services/user.service";
 
 const sortByFavorite = (v1, v2) => {
-  if (v1.favoriated && v2.favoriated) return 0;
-  if (v1.favoriated) return -1;
-  return 1;
+  if (v1.user_id && (v1.user_id === userService.user.id)) return -1;
+  if (v2.user_id && (v2.user_id === userService.user.id)) return 1;
+  return 0
+  
 };
 
 export const VacationsPage = props => {
