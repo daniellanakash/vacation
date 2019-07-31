@@ -5,10 +5,9 @@ import { Redirect } from "react-router-dom";
 import userService from "../services/user.service";
 
 const sortByFavorite = (v1, v2) => {
-  if (v1.user_id && (v1.user_id === userService.user.id)) return -1;
-  if (v2.user_id && (v2.user_id === userService.user.id)) return 1;
-  return 0
-  
+  if (v1.user_id && v1.user_id === userService.user.id) return -1;
+  if (v2.user_id && v2.user_id === userService.user.id) return 1;
+  return 0;
 };
 
 export const VacationsPage = props => {
@@ -66,6 +65,7 @@ export const VacationsPage = props => {
           </button>
         </div>
       </div>
+      <div className="helo">HELLO!</div>
       {data.sort(sortByFavorite).map(vacation => {
         return (
           <VacationComponent

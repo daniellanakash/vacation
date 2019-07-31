@@ -80,6 +80,10 @@ export function HomePage() {
     })
       .then(async res => {
         const results = await res.json();
+        if (!results.ok) {
+          setError(true);
+          return;
+        }
         userService.user = results.user;
         sessionStorage.setItem("vacation_user", JSON.stringify(results.user));
         if (userService.user.admin) {
@@ -87,8 +91,6 @@ export function HomePage() {
         } else {
           setToVacationPage(results.ok);
         }
-        setError(!results.ok);
-        console.log(results);
       })
       .catch(res => {
         console.log(res);

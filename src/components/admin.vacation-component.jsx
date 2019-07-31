@@ -19,15 +19,6 @@ export const AdminVacationComponent = props => {
     });
   };
 
-  const handleEdit = id => async () => {
-    const results = await fetch(`http://localhost:5000/api/vacations/${id}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
-      }
-    });
-  };
-
   return (
     <Card
       hoverable
@@ -45,7 +36,7 @@ export const AdminVacationComponent = props => {
         <Icon type="delete" onClick={handleDelete(vacation.id)} />
       ]}
     >
-      <ModalEdit visible={modal} setVisible={setModal} />
+      <ModalEdit visible={modal} setVisible={setModal} vacation={vacation} />
       <Meta title={vacation.destination} />
       <div>{vacation.description}</div>
       <div>{vacation.image}</div>

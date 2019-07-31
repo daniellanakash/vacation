@@ -101,6 +101,7 @@
 
    font-size: 24px;
    color: black;
+   font-weight: bold;
 
 }
 
@@ -113,4 +114,13 @@
 
    font-size: 18px;
    font-weight: bold;
+}
+
+.helo {
+   font-size: 20px;
+   margin-left: 23px;
+   margin-top: 10px;
+   font-weight: bold;
+
+
 }

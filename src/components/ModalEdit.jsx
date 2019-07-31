@@ -3,28 +3,32 @@ import { Form, Input, Modal } from "antd";
 import qs from "qs";
 
 export class ModalEdit extends React.Component {
-  state = {
-    ModalText: "Content of the modal",
-    confirmLoading: false,
-    price: "$",
-    toDate: "",
-    fromDate: "",
-    description: "",
-    destination: "",
-    picture: "https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg"
-  };
+  constructor(props) {
+    super(props);
+    const { vacation } = this.props;
 
-  handleOk = async () => {
-    console.log(qs.stringify(this.state.inputs));
-    const result = await fetch("http://localhost:5000/api/vacations", {
-      method: "POST",
+    this.state = {
+      ModalText: "Content of the modal",
+      confirmLoading: false,
+      price: vacation.price,
+      fromdate: vacation.fromdate,
+      todate: vacation.todate,
+      description: vacation.description,
+      destination: vacation.destination,
+      picture: "https://cdn.mos.cms.futurecdn.net/FUE7XiFApEqWZQ85wYcAfM.jpg"
+    };
+  }
+
+  handleOk = id => async () => {
+    const result = await fetch(`http://localhost:5000/api/vacations/${id}`, {
+      method: "PUT",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       },
       body: qs.stringify({
         price: this.state.price,
-        toDate: this.state.toDate,
-        fromDate: this.state.fromDate,
+        fromdate: this.state.fromdate,
+        todate: this.state.todate,
         description: this.state.description,
         destination: this.state.destination,
         picture: this.state.picture
@@ -45,13 +49,14 @@ export class ModalEdit extends React.Component {
 
   render() {
     const { confirmLoading } = this.state;
+    const { vacation } = this.props;
     return (
       <div>
         <Modal
           title="New vacation"
           visible={this.props.visible}
           confirmLoading={confirmLoading}
-          onOk={this.handleOk}
+          onOk={this.handleOk(vacation.id)}
           onCancel={this.handleCancel}
         >
           <div>
@@ -71,15 +76,15 @@ export class ModalEdit extends React.Component {
               <Form.Item label="From date">
                 <Input
                   type="date"
-                  value={this.state.fromDate}
-                  onChange={this.handleChange("fromDate")}
+                  value={this.state.fromdate}
+                  onChange={this.handleChange("fromdate")}
                 />
               </Form.Item>
               <Form.Item label="To date">
                 <Input
                   type="date"
-                  value={this.state.toDate}
-                  onChange={this.handleChange("toDate")}
+                  value={this.state.todate}
+                  onChange={this.handleChange("todate")}
                 />
               </Form.Item>
               <Form.Item label="Price">
